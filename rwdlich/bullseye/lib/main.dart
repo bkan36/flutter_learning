@@ -6,6 +6,9 @@ import 'package:BullsEyes/prompt.dart';
 import 'package:BullsEyes/control.dart';
 import 'package:BullsEyes/score.dart';
 import 'package:BullsEyes/gamemodel.dart';
+import 'package:BullsEyes/hitmebutton.dart';
+import 'package:BullsEyes/teststyles.dart';
+import 'package:BullsEyes/stylebutton.dart';
 
 void main() => runApp(BullsEyeApp());
 
@@ -59,21 +62,30 @@ class _GamePageState extends State<GamePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Prompt(targetValue: _model.target),
+              Padding(
+                padding: const EdgeInsets.only(top: 48.0, bottom: 32.0),
+                child: Prompt(targetValue: _model.target),
+              ),
               Control(
                 model: _model,
               ),
-              FlatButton(
-                child: Text('Hit Me!', style: TextStyle(color: Colors.blue)),
-                onPressed: () {
-                  _showAlert(context);
-                  this._alertIsVisible = true;
-                },
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: HitMeButton(
+                  text: 'HIT ME!',
+                  onPressed: () {
+                    _showAlert(context);
+                    this._alertIsVisible = true;
+                  },
+                ),
               ),
-              Score(
-                totalScore: _model.totalScore,
-                round: _model.round,
-                onStartOver: _startNewGame,
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Score(
+                  totalScore: _model.totalScore,
+                  round: _model.round,
+                  onStartOver: _startNewGame,
+                ),
               ),
             ],
           ),
@@ -107,8 +119,8 @@ class _GamePageState extends State<GamePage> {
   }
 
   void _showAlert(BuildContext context) {
-    Widget okButton = FlatButton(
-        child: Text('Awesome'),
+    Widget okButton = StyleButton(
+        icon: Icons.close,
         onPressed: () {
           Navigator.of(context).pop();
           this._alertIsVisible = false;
@@ -122,9 +134,31 @@ class _GamePageState extends State<GamePage> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('${_alertTitle()}'),
-          content: Text('The slider\'s value is ${_sliderValue()}.\n' +
-              'You scored ${_pointsForCurrentRound()} points this round.'),
+          title: Text(
+            _alertTitle(),
+            style: TextStyle(
+              fontSize: 24.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Text(
+                'THE SLIDER\'S VALUE IS',
+                textAlign: TextAlign.center,
+              ),
+              Text(
+                '${_sliderValue()}',
+                style: TargetTextStyle.bodyText1(context),
+                textAlign: TextAlign.center,
+              ),
+              Text(
+                '\nYou scored ${_pointsForCurrentRound()} points this round.',
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
           actions: <Widget>[okButton],
           elevation: 5,
         );

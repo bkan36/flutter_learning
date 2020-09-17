@@ -20,7 +20,9 @@ class SliderThumbImage extends SliderComponentShape {
       RenderBox parentBox,
       SliderThemeData sliderTheme,
       TextDirection textDirection,
-      double value}) {
+      double value,
+      double textScaleFactor,
+      Size sizeWithOverflow}) {
     final canvas = context.canvas;
     final imageWidth = image?.width ?? 10;
     final imageHeight = image?.height ?? 10;

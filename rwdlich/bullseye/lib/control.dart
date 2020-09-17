@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'gamemodel.dart';
-import 'sliderthumbimage.dart';
+import 'package:BullsEyes/gamemodel.dart';
+import 'package:BullsEyes/sliderthumbimage.dart';
 import 'dart:ui' as ui;
 import 'dart:typed_data';
 import 'package:flutter/services.dart';
