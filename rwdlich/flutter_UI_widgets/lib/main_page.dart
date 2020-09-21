@@ -5,27 +5,27 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter UI Widgets'),
+        title: Text("Flutter UI Widgets"),
       ),
       body: Container(
-        margin: EdgeInsets.all(32.0),
-        padding: EdgeInsets.all(16.0),
+        margin: EdgeInsets.all(32),
+        padding: EdgeInsets.all(16),
         width: 200,
         height: 200,
+        // color: Colors.green,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           border: Border.all(width: 2, color: Colors.red),
           color: Colors.green,
         ),
-        // color: Colors.green,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           // crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
+          children: <Widget>[
             Container(
               color: Colors.blue,
               child: Text(
-                '1',
+                "1",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 32),
               ),
@@ -33,7 +33,7 @@ class MainPage extends StatelessWidget {
             Container(
               color: Colors.blue,
               child: Text(
-                '2',
+                "2",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 32),
               ),
@@ -41,7 +41,7 @@ class MainPage extends StatelessWidget {
             Container(
               color: Colors.blue,
               child: Text(
-                '3',
+                "3",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 32),
               ),
@@ -51,9 +51,9 @@ class MainPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print('Clicked');
+          print("Clicked");
         },
-        child: Icon((Icons.add)),
+        child: Icon(Icons.add),
       ),
     );
   }
