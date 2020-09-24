@@ -36,6 +36,8 @@ import 'package:buzzkill/drink.dart';
 import 'package:buzzkill/ui_components/informative_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:buzzkill/measurement_conversion.dart';
+import 'package:intl/intl.dart';
 
 /// Displays lethal and safe dosages for the specified [Drink].
 class ResultsPage extends StatelessWidget {
@@ -56,6 +58,8 @@ class ResultsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final safeDosage = drink.safeDosage(bodyWeight);
     final lethalDosage = drink.lethalDosage(bodyWeight);
+    final numberFormat = NumberFormat('#.#');
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -72,7 +76,7 @@ class ResultsPage extends StatelessWidget {
                 leadingAssetName: 'assets/lethal.png',
                 message: S.of(context).resultsPageLethalDosageMessage(
                       lethalDosage,
-                      lethalDosage.toStringAsFixed(1),
+                      numberFormat.format(lethalDosage),
                     )),
             const SizedBox(
               height: 12,
@@ -82,12 +86,18 @@ class ResultsPage extends StatelessWidget {
                 leadingAssetName: 'assets/safe.png',
                 message: S.of(context).resultsPageSafeDosageMessage(
                       safeDosage,
-                      safeDosage.toStringAsFixed(1),
+                      numberFormat.format(safeDosage),
                     )),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 4),
               child: Text(
-                S.of(context).resultsPageFirstDisclaimer(drink.servingSize),
+                S.of(context).resultsPageFirstDisclaimer(
+                      numberFormat.format(
+                        drink.servingSize.toMillilitersIfShouldUseMetricSystem(
+                          Localizations.localeOf(context),
+                        ),
+                      ),
+                    ),
                 textAlign: TextAlign.start,
                 style: Theme.of(context)
                     .textTheme

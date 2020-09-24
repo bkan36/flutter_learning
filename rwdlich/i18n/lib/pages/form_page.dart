@@ -4,6 +4,7 @@ import 'package:buzzkill/pages/results_page.dart';
 import 'package:buzzkill/ui_components/digits_text_field.dart';
 import 'package:buzzkill/ui_components/drink_form_radio_list_tile.dart';
 import 'package:flutter/material.dart';
+import 'package:buzzkill/measurement_conversion.dart';
 
 /// Form for inputting the information needed to calculate the lethal and safe
 /// dosages of caffeinated drinks.
@@ -43,23 +44,7 @@ class _FormPageState extends State<FormPage> {
       _servingSizeTextController.clear();
       _caffeineTextController.clear();
       _selectedDrinkSuggestion = null;
-      _drinkSuggestions = [
-        Drink(
-          name: S.of(context).firstSuggestedDrinkName,
-          caffeineAmount: 145,
-          servingSize: 8,
-        ),
-        Drink(
-          name: S.of(context).secondSuggestedDrinkName,
-          caffeineAmount: 77,
-          servingSize: 1.5,
-        ),
-        Drink(
-          name: S.of(context).thirdSuggestedDrinkName,
-          caffeineAmount: 154,
-          servingSize: 16,
-        ),
-      ];
+      _drinkSuggestions = Drink.suggestionListOf(context);
     }
     super.didChangeDependencies();
   }
@@ -158,15 +143,20 @@ class _FormPageState extends State<FormPage> {
       );
 
   void _pushResultsPage(BuildContext context) {
-    final weight = _weightTextController.intValue;
+    final weight = _weightTextController.intValue.toPoundsIfNotAlready(
+      _userLocale,
+    );
 
-    // If there's no selected suggestion, we create a new [Drink] with
-    // the inputted data.
     final drink = _selectedDrinkSuggestion ??
         Drink(
           caffeineAmount: _caffeineTextController.intValue,
-          servingSize: _servingSizeTextController.intValue.toDouble(),
+          servingSize: _servingSizeTextController.intValue.toFlOzIfNotAlready(
+            _userLocale,
+          ),
         );
+
+    // If there's no selected suggestion, we create a new [Drink] with
+    // the inputted data.
 
     Navigator.of(context).push(
       MaterialPageRoute(
