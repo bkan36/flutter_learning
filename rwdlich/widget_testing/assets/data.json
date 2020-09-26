@@ -1,0 +1,82 @@
+{
+    "cars": [
+        {
+            "id": 1,
+            "title": "Toyota Yaris 2013",
+            "url": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/6bZBuXk9SxKsE8NUdnTL-w.1440x700.jpg",
+            "pricePerDay": 75.00,
+            "description": "This little 4 doors Toyota provide spacious that fit 5 people with decent trunk space. It is very eco-friendly with great gas mileage. It can easily park in the busy street in Los Angeles.",
+            "features": [
+                "Remote Keyless Entry",
+                "Anti-Lock Brakes (ABS)",
+                "Electronic Stability/Skid-Control System",
+                "Telescoping Steering Wheel"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Mercedes-Benz 2017",
+            "url": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/9FaKjyVQSkqh1p5fKpfZ7w.1440x700.jpg",
+            "pricePerDay": 175.00,
+            "description": "Fully loaded black on black.  On top of the standard options includes: Nappa Leather Interior, Heads Up Display, 20\" AMG Multispoke wheels, Premium 1 Package (Ventilated seats, keyless go, parktronic, active multicontour seats with massage, rapid heating seats), Sport Package: (AMG Wheels and body, stainless steel sport pedals), Warmth and Comfort Package: (Heated steering wheel, power adjustable rear seats, heated front and rear armrests), Surround View system, Driver Assistance Package: (Distronic Plus with steering assist, active blind sport assist, active lane keeping assist, pre-safe brake, BAS Plus).",
+            "features": [
+                "Rear-Seat DVD Player",
+                "GPS Navigation System",
+                "Side Airbags",
+                "Center Console With a Power Outlet"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Hyundai Sonata 2017",
+            "url": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/lP4LJ-JBRcuM7POHPlxRxg.1440x700.jpg",
+            "pricePerDay": 95.00,
+            "description": "Great on ⛽️, Roomy and comfortable for long distance trips , AUX and USB input.",
+            "features": [
+                "Roadside Assistance",
+                "Apple CarPlay/Android Auto connectivity",
+                "Lane assist",
+                "Quality tires"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Tesla Model X 2018",
+            "url": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/oACFeJbfQUiK4wbdTaIuaw.1440x700.jpg",
+            "pricePerDay": 275.00,
+            "description": "Meticulously maintained, but unfortunately the vehicle had a recent minor accident that damaged the rear right wheel's trim piece, but otherwise doesn't affect any of the sensors, waiting on tesla parts for a replacement. You will otherwise be renting a vehicle in impeccable shape with the deepest blacks with no tears, stains, food particles in crevices and interior is detailed after every rental. I have multiple Teslas  with renters experience in mind first and foremost. Will happily help above and beyond reasonable expectations. Equally good service as well as rates.",
+            "features": [
+                "Panoramic camera rearview mirror",
+                "Snow tires",
+                "Smart high beams",
+                "Side-curtain airbags"
+            ]            
+        },
+        {
+            "id": 5,
+            "title": "Tesla Model S 2018",
+            "url": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/A34-5P9kSQWUg8L-i9GJ4w.1440x700.jpg",
+            "pricePerDay": 205.00,
+            "description": "Fully loaded and equipped with autopilot, Ludicrous and Ludicrous+ mode, free LTE internet, Google navigation system, full glass panoramic sunroof, carbon fiber interior, upgraded sound system, upgraded climate control system with all heated or cooling white leather seats and many more upgraded premium options.",
+            "features": [
+                "Multiple cameras",
+                "Safety exit assist",
+                "Teen Driver Technology",
+                "Adaptive cruise control"
+            ]                  
+        },
+        {
+            "id": 6,
+            "title": "Scion xD 2014",
+            "url": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/mwZPDNrPRzSnOtBzgIidLg.1440x700.jpg",
+            "pricePerDay": 155.00,
+            "description": "Great gas saver , AUX input.",
+            "features": [
+                "Blindspot alert",
+                "Rear seat reminders",
+                "Range Rover’s ClearSight technology",
+                "Bluetooth"
+            ]                  
+        }
+    ]
+}
