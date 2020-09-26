@@ -65,9 +65,9 @@ class InformativeCard extends StatelessWidget {
               ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.only(
+                padding: const EdgeInsetsDirectional.only(
                   top: 16,
-                  right: 16,
+                  end: 16,
                   bottom: 16,
                 ),
                 child: Column(
