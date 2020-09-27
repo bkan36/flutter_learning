@@ -19,7 +19,7 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'pt_BR';
 
-  static m0(servingSize) => "*Baseado em uma porção de ${servingSize} fl. oz.";
+  static m0(servingSize) => "*Baseado em uma porção de ${servingSize} ml.";
 
   static m1(quantity, formattedNumber) => "${Intl.plural(quantity, one: 'Uma porção.', other: '${formattedNumber} porções no seu sistema de uma vez.')}";
 
@@ -34,10 +34,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "formPageCustomDrinkCaffeineAmountInputSuffix" : MessageLookupByLibrary.simpleMessage("mg"),
     "formPageCustomDrinkRadioTitle" : MessageLookupByLibrary.simpleMessage("Outra"),
     "formPageCustomDrinkServingSizeInputLabel" : MessageLookupByLibrary.simpleMessage("Tamanho"),
-    "formPageCustomDrinkServingSizeInputSuffix" : MessageLookupByLibrary.simpleMessage("fl. oz"),
+    "formPageCustomDrinkServingSizeInputSuffix" : MessageLookupByLibrary.simpleMessage("ml"),
     "formPageRadioListLabel" : MessageLookupByLibrary.simpleMessage("Escolha uma bebida"),
     "formPageWeightInputLabel" : MessageLookupByLibrary.simpleMessage("Peso Corporal"),
-    "formPageWeightInputSuffix" : MessageLookupByLibrary.simpleMessage("libras"),
+    "formPageWeightInputSuffix" : MessageLookupByLibrary.simpleMessage("quilos"),
     "resultsPageAppBarTitle" : MessageLookupByLibrary.simpleMessage("Dosagens"),
     "resultsPageFirstDisclaimer" : m0,
     "resultsPageLethalDosageMessage" : m1,
@@ -46,6 +46,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "resultsPageSafeDosageTitle" : MessageLookupByLibrary.simpleMessage("Limite Seguro Diário"),
     "resultsPageSecondDisclaimer" : MessageLookupByLibrary.simpleMessage("*Se aplica a pessoas com 18 anos ou mais. Essa calculadora não substitui conselhos médicos profissionais."),
     "secondSuggestedDrinkName" : MessageLookupByLibrary.simpleMessage("Espresso (Shot)"),
-    "thirdSuggestedDrinkName" : MessageLookupByLibrary.simpleMessage("Latte (Caneca)")
+    "thirdSuggestedDrinkName" : MessageLookupByLibrary.simpleMessage("Pingado (Copo Americano)")
   };
 }
