@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>780270152485-dst744c3fu4he25vrotqcsd4nh51umoc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.780270152485-dst744c3fu4he25vrotqcsd4nh51umoc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAI9AIA5uybApZcq3stnPPfeWOq9oGlTfc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>780270152485</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.raywenderlich.magiccart</string>
+	<key>PROJECT_ID</key>
+	<string>magiccart-7f2fb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>magiccart-7f2fb.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:780270152485:ios:055a7a25815799bea988cc</string>
+	<key>DATABASE_URL</key>
+	<string>https://magiccart-7f2fb.firebaseio.com</string>
+</dict>
+</plist>

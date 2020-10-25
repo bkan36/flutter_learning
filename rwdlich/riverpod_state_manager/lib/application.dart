@@ -74,11 +74,11 @@ class _ApplicationState extends State<Application> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.movie),
-              title: Text('Films'),
+              label: 'Films',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.star),
-              title: Text('Faves'),
+              label: 'Faves',
             ),
           ],
         ),

@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
 FLUTTER_ROOT=/home/bink/snap/flutter/common/flutter
-FLUTTER_APPLICATION_PATH=/home/bink/dev/mobile_learning/flutter_learning/rwdlich/provider_state_manager
+FLUTTER_APPLICATION_PATH=/home/bink/dev/mobile_learning/flutter_learning/rwdlich/riverpod_state_manager
 FLUTTER_TARGET=lib/main.dart
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build/ios
